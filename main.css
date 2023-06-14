@@ -1,0 +1,228 @@
+input[type="checkbox"] {
+    appearance: none;
+    display: none;
+}
+body {
+    background-color: #ddd;
+    margin: 0;
+}
+label {
+    margin: 200px auto;
+    width: 200px;
+    height: 80px;
+    border-radius: 100px;
+    display: block;
+    background-color: skyblue;
+    box-shadow: inset 0 0 5px 5px gray;
+    position: relative;
+    overflow: hidden;
+}
+.sun {
+    position: absolute;
+top: 50%;
+left: 11px;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+background-color: #ffd700;
+transform: translateY(-50%);
+box-shadow: 2px 2px 4px #444;
+z-index: 10;
+transition: all 0.5s;
+}
+.sun::before {
+content: "";
+position: absolute;
+width: 95px;
+height: 95px;
+background-color: #fff3;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+border: 35px solid;
+border-radius: 50%;
+border-color: #95929226;
+}
+.sun::after {
+    content: "";
+position: absolute;
+width: 165px;
+height: 165px;
+background-color: transparent;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+border-radius: 50%;
+border: 35px solid;
+border-color: #aaaaaa42
+}
+.cloud-1 {
+    position: absolute;
+    bottom: -1px;
+right: -24px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+}
+.cloud-2 {
+    position: absolute;
+bottom: -30px;
+right: 0px;
+width: 60px;
+height: 60px;
+border-radius: 50%;
+background-color: white;
+}
+.cloud-3 {
+    position: absolute;
+bottom: -40px;
+right: 41px;
+width: 60px;
+height: 60px;
+border-radius: 50%;
+background-color: white;
+}
+.cloud-4 {
+    position: absolute;
+bottom: -36px;
+right: 75px;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+background-color: white;
+}
+.cloud-5 {
+    position: absolute;
+    bottom: -33px;
+    right: 104px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+}
+.cloud-6 {
+    position: absolute;
+bottom: -37px;
+left: 3px;
+width: 60px;
+height: 60px;
+border-radius: 50%;
+background-color: white;
+}
+.fa-star {
+    opacity: 0;
+}
+
+/****************************************************/
+input[type="checkbox"]:checked + label{
+background-color: black;
+}
+
+input[type="checkbox"]:checked + label .sun{
+background-color: #aaa;
+left: 140px;
+box-shadow: -3px -3px 4px #ddd;
+}
+
+
+input[type="checkbox"]:checked +label .cl{
+    display: none;
+}
+input[type="checkbox"]:checked +label .sun .moon {
+    box-shadow: inset 1px 1px 2px 3px #777;
+}
+input[type="checkbox"]:checked +label .sun .dot1 {
+    position: absolute;
+    width: 12px;
+height: 12px;
+border-radius: 50%;
+background-color: #888;
+top: 8px;
+left: 20px;
+}
+input[type="checkbox"]:checked +label .sun .dot2 {
+    position: absolute;
+    width: 18px;
+height: 18px;
+border-radius: 50%;
+background-color: #888;
+top: 27px;
+left: 11px
+}
+input[type="checkbox"]:checked +label .sun .dot3 {
+    position: absolute;
+    width: 12px;
+height: 12px;
+border-radius: 50%;
+background-color: #888;
+top: 27px;
+left: 33px;
+}
+
+input[type="checkbox"]:checked + label .fa-star {
+    position: absolute;
+    opacity: 100%;
+    color: white;
+}
+input[type="checkbox"]:checked + label .star1 {
+    top: 10px;
+left: 35px;
+font-size: 12px;
+}
+input[type="checkbox"]:checked + label .star2 {
+    top: 28px;
+left: 22px;
+font-size: 8px;
+}
+input[type="checkbox"]:checked + label .star3 {
+    top: 18px;
+left: 120px;
+font-size: 10px;
+}
+input[type="checkbox"]:checked + label .star4 {
+    top: 42px;
+left: 50px;
+font-size: 6px;
+}
+input[type="checkbox"]:checked + label .star5 {
+    top: 34px;
+left: 104px;
+font-size: 8px;
+}
+input[type="checkbox"]:checked + label .star6 {
+    top: 15px;
+left: 73px;
+font-size: 16px;
+}
+input[type="checkbox"]:checked + label .star7 {
+    top: 52px;
+left: 71px;
+font-size: 8px;
+}
+input[type="checkbox"]:checked + label .star8 {
+    top: 53px;
+left: 31px;
+font-size: 7px;
+}
+input[type="checkbox"]:checked + label .star9 {
+    top: 55px;
+left: 99px;
+font-size: 5px;
+}
+
+p {
+    margin: 50px auto;
+    text-align: center;
+    background-color: #777;
+}
+
+footer {
+    width: 100%;
+    padding: 20px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    margin-top: 200px;
+
+}
